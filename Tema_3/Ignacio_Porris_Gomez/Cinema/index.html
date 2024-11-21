@@ -1,0 +1,183 @@
+<!--UNIR-CINEMA
+Ignacio Porris Gomez 2024 07 11
+-->
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta charset=utf-8>
+		<title>
+			UNIR-CINEMA
+		</title>
+		<link href="https://fonts.googleapis.com/css?family=Lato|Roboto|Roboto+Slab&display=swap" rel="stylesheet"/> 
+		<link rel="stylesheet" href="./styles.css"/>
+	</head>
+	<body>
+		<table class="GeneralView">
+			<tbody class= "GeneralView__Cinema">
+				<tr class="Cinema__title">
+					<td class = "title__name">
+						<h1 class="name">UNIR - CINEMA </h1>
+					</td>
+
+				</tr>
+				
+				<tr class="Cinema__Screen">
+					<td>
+					<table class="Screen__Layout">
+						<tbody>
+							<tr>
+								
+								<td class="Layout__Element">
+									<div ><p> 
+									</p></div>
+						
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					</td>
+				</tr>
+				<tr class = "Cinema__Seating">
+					<td>
+					<table class ="Seating__Layout">
+						<tbody>
+							<tr class="Layout__Row" id="r100">
+								<td class = "Row__label" id="l100">
+									<p >Fila 1</p>
+								</td>
+								<td class = "Row__Seat" id="100">
+									<p class = "seat empty">E</p>
+								</td>
+								<td class = "Row__Seat" id="101">
+									<p class = "seat empty">E</p>
+								</td>
+								<td class = "Row__Seat" id="102">
+									<p class = "seat empty">E</p>
+								</td>
+								<!--<td class = "Row__Hallway" >
+									<p class = "hallway"></p>
+								</td>-->
+								<td class = "Row__Seat" id="103">
+									<p class = "seat empty">E</p>
+								</td>
+								<td class = "Row__Seat" id="104">
+									<p class = "seat empty">E</p>
+								</td>
+								<td class = "Row__Seat" id="105">
+									<p class = "seat empty">E</p>
+								</td>
+							</tr>
+							<tr class="Layout__Row" id="r200">
+								<td class = "Row__label" id="l200">
+									<p >Fila 2</p>
+								</td>
+								<td class = "Row__Seat" id="200">
+									<p class = "seat empty">E</p>
+								</td>
+								<td class = "Row__Seat" id="201">
+									<p class = "seat empty">E</p>
+								</td>
+								<td class = "Row__Seat" id="202">
+									<p class = "seat empty">E</p>
+								</td>
+								<!--<td class = "Row__Hallway" >
+									<p class = "hallway"></p>
+								</td>-->
+								<td class = "Row__Seat" id="203">
+									<p class = "seat empty">E</p>
+								</td>
+								<td class = "Row__Seat" id="204">
+									<p class = "seat empty">E</p>
+								</td>
+								<td class = "Row__Seat" id="205">
+									<p class = "seat empty">E</p>
+								</td>
+							</tr>
+							<tr class="Layout__Row" id="r300">
+								<td class = "Row__label" id="l300">
+									<p >Fila 3</p>
+								</td>
+								<td class = "Row__Seat" id="300">
+									<p class = "seat empty">E</p>
+								</td>
+								<td class = "Row__Seat" id="301">
+									<p class = "seat empty">E</p>
+								</td>
+								<td class = "Row__Seat" id="302">
+									<p class = "seat empty">E</p>
+								</td>
+								<!--<td class = "Row__Hallway" >
+									<p class = "hallway"></p>
+								</td>-->
+								<td class = "Row__Seat" id="303">
+									<p class = "seat empty">E</p>
+								</td>
+								<td class = "Row__Seat" id="304">
+									<p class = "seat empty">E</p>
+								</td>
+								<td class = "Row__Seat" id="305">
+									<p class = "seat empty">E</p>
+								</td>
+							</tr>
+							<tr class="Layout__Row" id="r400">
+								<td class = "Row__label" id="l400">
+									<p >Fila 4</p>
+								</td>
+								<td class = "Row__Seat" id="400">
+									<p class = "seat empty">E</p>
+								</td>
+								<td class = "Row__Seat" id="401">
+									<p class = "seat empty">E</p>
+								</td>
+								<td class = "Row__Seat" id="402">
+									<p class = "seat empty">E</p>
+								</td>
+								<!--<td class = "Row__Hallway" >
+									<p class = "hallway"></p>
+								</td>-->
+								<td class = "Row__Seat" id="403">
+									<p class = "seat empty">E</p>
+								</td>
+								<td class = "Row__Seat" id="404">
+									<p class = "seat empty">E</p>
+								</td>
+								<td class = "Row__Seat" id="405">
+									<p class = "seat empty">E</p>
+								</td>
+							</tr>
+							
+						</tbody>
+					</table>
+				</td>
+				</tr>
+			
+				<tr class = "Cinema__Reservation">
+					<td>
+					<table class="Reservation__form">
+						<tbody>
+							<tr class = "Form__instruction">
+								<td >
+									<h4 class = "title">Introduce cuántos asientos quires reservar</h4>
+								</td>
+							</tr>
+							<tr class= "Form__elements">
+								<td class= "elements">
+									 <form action="">
+									  <input class="elements__selector"type="number" id="fseats" name="seats_to_reserved" min="0" max="24" oninput="suggest(this.value)"><br><br>
+									  <input class="elements__button" type="submit" value="Confirmar Reserva" onclick = "suggest(document.getElementById('fseats').value)">
+									</form> 
+									
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					</td>
+				</tr>
+				
+			</tbody>
+		</table>
+		<script src="cinema.js"></script>
+	</body>
+</html>

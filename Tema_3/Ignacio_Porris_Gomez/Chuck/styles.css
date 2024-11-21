@@ -1,0 +1,43 @@
+/*
+Ignacio Porris Gomez 2024
+Chuck jokes css file*/
+
+body{
+	font-family: 'Roboto Slab', sans-serif;
+	font-size:1.3rem;
+	line-height:1.2;
+	background-color: beige;
+}
+.but_chis-row{
+	height: 13rem;
+}
+.row-button{
+	margin-left: 1rem;
+	min-width: 18%;
+	min-height: 12rem;
+}
+.button{
+	border-radius: 0.5rem;
+	height: 4rem;
+  font-size: 1.5rem;
+  background-color: whitesmoke;
+  width: 12rem;
+
+}
+.row-text{
+	margin-right: 1rem;
+	min-width: 80%;
+}
+
+.text{
+	min-width: 80%;
+	min-height: 100%;
+	margin-top: 2rem;
+	margin-left: 1rem;
+	margin-right: 2rem;
+	font-size: 1.6rem;
+	color: forestgreen;
+	font-weight: bold;
+	text-align: left;
+}
+

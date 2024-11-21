@@ -1,0 +1,238 @@
+/*UNIR-CINEMA css file*/
+
+body{
+	font-family: 'Roboto Slab', sans-serif;
+	font-size:1.3rem;
+	line-height:1.2;
+	background-color: beige;
+}
+.title__name{
+	text-align: center;
+}
+.Cinema__Screen{
+	height: 20%;
+	width: 90%;
+	color: gray;
+}
+.Screen__Layout{
+	width: 80%;
+	margin-left: 10%;
+
+}
+.Layout__Element{
+	height: 18rem;
+  background-color: gray;
+  margin: 1rem;
+  width: 90%;
+  border: 1rem solid black;
+}
+table.GeneralView{
+	border-radius: 1rem;
+	border-color: ghostwhite;
+	border: 10px solid black;
+	width: 68%;
+	margin-left: 16%;
+
+}
+.Seating__Layout{
+	width: 60%;
+	margin-left:20%;
+	margin-top: 3rem;
+}
+.Row__label{
+	width:6rem;
+	text-align: right;
+}
+.Row__Seat{
+	text-align: center;
+
+}
+.Row__Hallway{
+	min-width: 1rem;
+}
+.seat{
+	width: 50%;
+	height: 50%;
+	margin-left: 25%;
+}
+.empty{
+	background-color: rgba(0,255,0,0.4);
+}
+.reserved{
+	background-color: rgba(255,0,0,0.4);
+}
+.Cinema__Reservation{
+	text-align: center;
+}
+.Reservation__form{
+	width: 100%;
+}
+.elements__selector{
+	width: 3rem;
+	font-family: 'Roboto Slab', sans-serif;
+	font-size:1.3rem;
+	height: 2rem;
+	background-color: whitesmoke;
+}
+.elements__button{
+	height: 3rem;
+  font-size: 1rem;
+  background-color: whitesmoke;
+  width: 12rem;
+}
+/*
+td>table, ul>table{
+	min-width: 100%;
+}
+.Generaltable__Presentation{
+	width: 100%;
+}
+.imgEle{
+	text-align: center;
+	width: 100%;
+	max-width: 260px;
+	background-color: whitesmoke;
+	vertical-align: bottom;
+	border-radius: 3rem;
+	padding: 10px;
+}
+.title{
+	text-align: left;
+	font-size: 2.4rem;
+	padding-left:10% ;
+	padding-top: 2rem;
+	font-family: 'Arial', sans-serif;
+}
+.block__elements{
+	width: 100%;
+}
+.Resume__contactInfo{
+	width: 100%;
+}
+.contactInfo__dataStrings{
+	padding-left: 8 rem;
+}
+.elements__Synopsis, .dataStrings__contact, .jobHistoryElements__jobs, .table__Education, .data_skill{
+	padding-left: 8rem;
+}
+.elements__Synopsis{
+	padding-right: 8rem;
+}
+.title__name{
+	text-align: center;
+	font-size: 1.4rem;
+}
+.title__string{
+	width: 100%;
+	text-align: center;
+}
+.Presentation__pic{
+	align-items: center;
+}
+.pic__imgEle{
+	width: 100%;
+	text-align: center;
+}
+.jobs__title{
+	font-style: oblique;
+	display: inline;
+}
+.jobs__dates{
+	display: inline;
+	padding-left: 20rem;
+}
+.jobs__description{
+	padding-left: 4rem;
+}
+.degreesSchools{
+	height= 3rem;
+}
+.degreesSchools__degree{
+	padding-left: 2rem;
+	align-items: baseline;
+}
+.degreesSchools__School{
+	padding-left: 8rem;
+	font-style: italic;
+	max-width: 20px;
+	align-items: baseline;
+	height: 3rem;
+}
+
+.elements__skill{
+	padding-left: 8rem;
+
+}
+.skill__description{
+	padding-top: 1rem;
+}
+/*
+@media (max-width: 480px){
+title{
+	font-family: 'Roboto Slab', sans-serif;
+	font-size:1.3rem;
+	line-height:1.2;
+}
+h1{
+	margin-left: 4%;
+}
+label{
+	display: none;
+	font-family: 'Lato', sans-serif
+}
+input{
+	width: 80%;
+	margin-left: 4%;
+	padding-left:10%;
+	font-size: 1.4rem;
+}
+
+#button{
+	margin-top: 2rem;
+	min-height: 40px;
+	font-size: 2rem;
+	margin-left: 4%;
+	width: 92%;
+	text-align: center;
+	background-color: lightgreen;
+	font-family: 'Lato',bolt
+}
+#timeLabel{
+	display: initial;
+	margin-left:4%;
+}
+}
+@media (min-width: 481px){
+bodyNOT{
+	font-family:Lato,Robot,sans-serif;
+	font-size:1.3rem;
+	line-height:1.2;
+	background-color: beige;
+}
+h1{
+	margin-left: calc(20% + 1rem);
+}
+table__contactinfo{
+	font-family:Lato,Robot,sans-serif;
+	font-size:1.1rem;
+	line-height:1.0;
+}
+input{
+	width: 30%;
+	padding-left: 1rem;
+}
+#button{
+	margin-top: 2rem;
+	font-size: 2rem;
+	margin-left: calc(20% + 1rem);
+	width: 30%;
+	background-color: lightgreen;
+}
+label{
+	width: 20%;
+	margin-right: 1rem;
+	display: inline-block;
+	text-align: end;
+}
+}
+*/

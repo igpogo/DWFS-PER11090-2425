@@ -1,0 +1,184 @@
+<!-- index.html
+
+	Ignacio Porris Gomez October 2024
+
+
+    Crearemos un archivo HTML index.html que contendrá, como mínimo, un botón con el texto "Dame un chiste" que, cada vez que se presione, realizará una llamada contra la API de chistes aleatorios de Chuck Norris y volcará el chiste recibido en un párrafo <p> del documento HTML.
+    El script para realizar esta acción estará dentro del propio archivo HTML.
+    Eventos de JavaScript.
+    Crearemos un archivo CSS styles.css que contendrá cualquier estilo que queramos aplicar al documento HTML.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="styles.css"/>
+	<title> Los chistes de Chuckito</title>
+
+</head>
+<body class ="chistes">
+	<div>
+		<table class= "tabla-but_chis">
+			<tbody>
+				<tr class= "but_chis-row">
+					<td class="row-button">
+						<!--<button class = "button" onclick = "fetchSincrono()" id="button"> Dame un chiste!</button>-->
+						<button class = "button" onclick = "getJoke()" id="button"> Dame un chiste!</button>
+					</td>
+					<td class="row-text">
+						<p class="text" id = "joke_text" >Los chistes se mostrarán aquí</p>
+					</td>
+				</tr>
+			</tbody>
+	</table>
+	</div>
+
+	<script type="text/javascript">
+		/* funcion para pedir el json a chucknorris api*/
+
+		const url = "https://api.chucknorris.io/jokes/random";
+		function getJoke(){
+			
+			let joke = "blablabla";
+			fetch(url).then(responseJson => responseJson.json()).then(json => {
+				joke = json.value;
+				console.log(joke);
+				showJoke(joke);
+				return joke;
+			});
+			
+		}
+		
+		/* cambiamos el mensaje en la parrafo con el chiste recibido
+		por la funcion con un parametro
+		Lo realizo con una promesa 
+		*/
+		function showJoke(joke="No chistes de Chuckito") {//jugando con las promesas
+			let ele = document.getElementById("joke_text");
+			let ele_old_text = ele.innerHTML
+
+			let showPromise = new Promise((suc,fail) => {
+				ele.innerHTML = joke;
+				if (ele.ele_old_text !== joke){
+					suc(joke);
+				}else{
+					fail();
+				}
+			});
+			let succes = (joke) => (console.log("change joke to ->"+ joke));
+			let fail = () => console.log("FAILED to change the joke");
+			
+			showPromise.then(succes,fail);
+
+			//let ele = document.getElementById("joke_text");
+			//ele.innerHTML = joke;
+
+		}
+		
+		function requestJokeFailed(){
+			let ele = document.getElementById("joke_text");
+			ele.textContent = "No recibimos chistes malos Chucky";
+
+		}
+		/*
+		funcion con el patrón async await
+		*/
+		async function fetchSincrono() {
+
+		    //let url = "https://catfact.ninja/fact";
+		    let fetchResponse = await fetch(url);
+		    let json = await fetchResponse.json();
+		    let joke = json.value;
+		    console.log("chiste sincrono: " + joke);
+		    showJoke(joke);
+    		//return joke;//no necesito devolver nada
+		}
+		/* esta funcion siempre me daba problemas*/
+		/*
+		function requestJoke() {
+			showJoke("buscando chistes ... ");
+			let joke ='';
+			let promisedJoke = new Promise(function(suc(joke),fail){
+				let joke = getJoke();
+				if (joke){
+					suc(joke);
+				}else{
+					fail();
+				};
+			});
+			promisedJoke.then(showJoke,requestJokeFailed);
+			
+			/*
+			let jRPromised = new Promise((suc(joke),fail()){
+				joke = getJoke();
+				if (joke != ''){
+					suc(joke);
+				}else{
+					fail();
+				}
+			});
+
+			jRPromised.then(showJoke(joke),requestJokeFailed);
+			*//*
+		}*/
+		
+</script>
+</body>
+</html>	
+
+<!--
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First JavaScript</h1>
+
+<button type="button"
+onclick="showJoke()">
+Click me to display Date and Time.</button>
+
+<p id="demo"></p>
+<script type="text/javascript">
+	function getDate() {
+		document.getElementById('demo').innerHTML = Date();
+	}
+	function buttonPressed(){
+			let ele = document.getElementBy("button");
+			ele.style.backgroundColor = "red";
+		}
+		function getJoke(){
+
+			const url = "https://api.chucknorris.io/jokes/random";
+			let joke = fetch(url).then(responseJson => responseJson.json).then(json => json.value);
+			return joke;
+		}
+		function showJoke(joke="default") {
+			let ele = document.getElementById("demo");
+			ele.textContent = joke;
+
+		}
+		function requestJokeFailed(){
+			let ele = document.getElementById("joke_text");
+			ele.textContent = "";
+
+		}
+		function requestJoke() {
+			showJoke("buscando chistes ... ");
+			let requestJokeed = new Promise((showJoke,requestJokeFailed)=>{
+				let joke = getJoke();
+				if (joke != undefined){
+					showJoke(joke);
+				}else{
+					requestJokeFailed();
+				}
+			});
+			requestJokeed();
+
+		}
+</script>
+
+</body>
+</html> 
+-->
