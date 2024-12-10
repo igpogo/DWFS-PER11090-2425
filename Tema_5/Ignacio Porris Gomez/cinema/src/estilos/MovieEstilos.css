@@ -1,0 +1,71 @@
+
+
+
+.Panel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    justify-content: center;
+}
+
+
+.Movie-Card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+}
+
+.Card-cartel {
+    width: 90%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.Card-detalles {
+    margin-top: 15px;
+    font-size: 0.85rem;
+    color: #34495e;
+    margin: 5px 0;
+}
+
+.Card_titulo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.Card-sinopsis {
+    font-size: 0.95rem;
+    color: #7f8c8d;
+    margin: 10px 0;
+}
+
+
+.Card-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+}
+
+.Card-button:hover {
+    background-color: #2980b9;
+}
+
+
+
